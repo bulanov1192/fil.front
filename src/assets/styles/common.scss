@@ -1,0 +1,38 @@
+@import "breakpoints";
+
+$base-bg: #fafafa;
+$content-bg: #fff;
+$common-corner: 8px;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background: $base-bg;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+:root {
+    /* spacings */
+    @include setProperty(--content-padding, 12px 8px, 14px 12px, 18px, 24px);
+
+    /* colors */
+    --content-color: #fff;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    padding: var(--content-padding);
+    background: $content-bg;
+
+    @include sm {
+        border-radius: $common-corner;
+    }
+}
