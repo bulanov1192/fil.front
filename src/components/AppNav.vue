@@ -29,8 +29,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
 
-  @include xs {
+  @include sm {
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
   }
 }
@@ -42,6 +43,7 @@ nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  user-select: none;
 
   div {
     display: block;
@@ -70,6 +72,7 @@ nav {
   border-radius: $common-corner;
   cursor: pointer;
   margin-right: 8px;
+  user-select: none;
 
   span {
     display: none;
@@ -94,7 +97,7 @@ nav {
   }
 
   @include sm {
-    border: 1px solid #dadada;
+    border: $border-default;
 
     &:hover {
       background-color: rgba(#ddd, 0.3);

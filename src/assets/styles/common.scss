@@ -3,6 +3,7 @@
 $base-bg: #fafafa;
 $content-bg: #fff;
 $common-corner: 8px;
+$border-default: 1px solid #dadada;
 
 * {
     box-sizing: border-box;
@@ -19,8 +20,6 @@ html {
 }
 
 :root {
-    /* spacings */
-    @include setProperty(--content-padding, 12px 8px, 14px 12px, 18px, 24px);
 
     /* colors */
     --content-color: #fff;
@@ -29,7 +28,6 @@ html {
 .content {
     width: 100%;
     height: 100%;
-    padding: var(--content-padding);
     background: $content-bg;
 
     @include sm {
