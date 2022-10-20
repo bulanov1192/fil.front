@@ -4,7 +4,7 @@
       <div></div>
       <span>Список студентов</span>
     </router-link>
-    <a rel="noopener" class="add-btn">
+    <a rel="noopener" class="add-btn" @click="addStudent">
       <span>Добавить студента</span>
       <div></div>
     </a>
@@ -14,6 +14,11 @@
 <script>
 export default {
   name: "AppNav",
+  methods: {
+    addStudent() {
+      this.$root.$emit("addStudent");
+    },
+  },
 };
 </script>
 
